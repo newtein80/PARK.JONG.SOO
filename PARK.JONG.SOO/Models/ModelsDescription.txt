@@ -1,0 +1,23 @@
+﻿Data Source=127.0.0.1;Initial Catalog=ParkJongSoo.Core.Tutorial;User ID=sa;Password=#skdlf12;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+
+
+==================================================================
+Work : Scaffold-DbContext "Data Source=PARKJS\\SQLEXPRESS;Initial Catalog=ParkJongSoo.Core.Tutorial;User ID=sa;Password=#skdlf12;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models/System -Context "ApplicationDbContext" -table T_COMMON_CODE, T_MENU -Force
+
+
+Home : Scaffold-DbContext "Data Source=PARKJS\\SQLEXPRESS;Initial Catalog=ParkJongSoo.Core.Tutorial;User ID=sa;Password=#skdlf12;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models/SystemViewModel -Context "ApplicationDbContext" -table T_COMMON_CODE, T_MENU -Force
+
+
+-- https://stackoverflow.com/questions/17650482/instance-failure-error-while-connection-string-is-correct
+Scaffold-DbContext "Data Source=PARKJS\\SQLEXPRESS;Initial Catalog=ParkJongSoo.Core.Tutorial;User ID=sa;Password=#skdlf12;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models/Manage -Context "ApplicationDbContext" -table T_ORG_INFO, T_SYSTEM_INFO, T_USER_INFO, T_APPROVAL_MASTER, T_ASSET_INFO -Force
+
+
+
+
+
+Add-Migration -Context ApplicationDbContext AspNetCore_User_Initial_20181106
+
+Add-Migration -Context ApplicationDbContext AspNetCore_User_Add_Column_Change_TName_04
+
+
+Update-Database -Context ApplicationDbContext

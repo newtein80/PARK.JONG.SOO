@@ -1,0 +1,5 @@
+﻿private readonly UserManager<ApplicationUser> _userManager;
+private readonly SignInManager<ApplicationUser> _signInManager;
+
+
+전부 위와 같이 바꾸어줘야 한다!

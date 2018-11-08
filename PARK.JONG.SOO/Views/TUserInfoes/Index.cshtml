@@ -1,0 +1,167 @@
+﻿@model IEnumerable<PARK.JONG.SOO.Models.ManageViewModel.TUserInfo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfirmPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgCd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedIp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobilephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserAuth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DutyType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MenuAuth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoginYn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LockYn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastLoginDt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateUserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateUserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateDt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SortOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PwdchangeYn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JikgupName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DutytypeName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfirmPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgCd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignedIp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobilephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserAuth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DutyType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuAuth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoginYn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LockYn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastLoginDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SortOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PwdchangeYn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JikgupName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DutytypeName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Bunho">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Bunho">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Bunho">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

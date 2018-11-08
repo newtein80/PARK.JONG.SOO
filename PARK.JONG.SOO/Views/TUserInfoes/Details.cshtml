@@ -1,0 +1,156 @@
+﻿@model PARK.JONG.SOO.Models.ManageViewModel.TUserInfo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TUserInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPassword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrgCd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrgCd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedIp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AssignedIp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobilephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mobilephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAuth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAuth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DutyType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DutyType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuAuth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MenuAuth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginYn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoginYn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LockYn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LockYn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastLoginDt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastLoginDt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreateUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreateDt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdateUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateDt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdateDt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SortOrder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SortOrder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PwdchangeYn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PwdchangeYn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JikgupName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JikgupName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DutytypeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DutytypeName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Bunho">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
