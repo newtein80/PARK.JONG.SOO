@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PARK.JONG.SOO.Models.ApplicationModel;
 using PARK.JONG.SOO.Models.ManageViewModel;
 using PARK.JONG.SOO.Models.SystemViewModel;
 
 namespace PARK.JONG.SOO.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    // Exception : Cannot create a DbSet for 'ApplicationUser' because this type is not included in the model for the context
+    // I found the problem. My ApplicationContext was inheriting from DbContext. I changed it to IdentityDbContext<ApplicationUser> and it works.
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
