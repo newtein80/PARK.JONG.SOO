@@ -24,6 +24,8 @@ namespace PARK.JONG.SOO.Data
         public virtual DbSet<TCommonCode> TCommonCode { get; set; }
         public virtual DbSet<TMenu> TMenu { get; set; }
 
+        public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

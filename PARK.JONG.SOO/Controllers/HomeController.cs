@@ -4,12 +4,20 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PARK.JONG.SOO.Data;
 using PARK.JONG.SOO.Models;
 
 namespace PARK.JONG.SOO.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext _applicationDbContext;
+
+        public HomeController(ApplicationDbContext applicationDbContext)
+        {
+            _applicationDbContext = applicationDbContext;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -18,8 +26,8 @@ namespace PARK.JONG.SOO.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
-            return View();
+            
+            return View(_applicationDbContext.Users.ToList());
         }
 
         public IActionResult Contact()
