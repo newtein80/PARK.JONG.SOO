@@ -34,6 +34,7 @@ namespace PARK.JONG.SOO.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
 
+            #region+ 주석
             modelBuilder.Entity<TOrgInfo>(entity =>
             {
                 entity.HasKey(e => e.OrgCd);
@@ -292,6 +293,7 @@ namespace PARK.JONG.SOO.Data
                     .HasMaxLength(1)
                     .IsUnicode(false);
             });
+            #endregion
         }
     }
 }

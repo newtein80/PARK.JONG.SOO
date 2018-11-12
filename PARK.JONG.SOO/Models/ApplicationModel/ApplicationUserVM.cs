@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PARK.JONG.SOO.Models.ApplicationModel
 {
-    public class ApplicationUserVM
+    public partial class ApplicationUserVM
     {
         [Required]
         [EmailAddress]

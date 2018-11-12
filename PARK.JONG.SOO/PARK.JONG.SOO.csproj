@@ -13,8 +13,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
-    <Folder Include="Controllers\UserControlls\" />
     <Folder Include="Controllers\SystemControlls\" />
+    <Folder Include="Controllers\UserControlls\" />
   </ItemGroup>
 
 </Project>
