@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using PARK.JONG.SOO.Data;
 using PARK.JONG.SOO.Models;
+using PARK.JONG.SOO.Models.ApplicationModel;
 
 namespace PARK.JONG.SOO.Controllers
 {
@@ -23,11 +26,18 @@ namespace PARK.JONG.SOO.Controllers
             return View();
         }
 
+        public IActionResult UserList()
+        {
+            return View(_applicationDbContext.Users.ToList());
+            //return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-            
-            return View(_applicationDbContext.Users.ToList());
+
+            //return View(_applicationDbContext.Users.ToList());
+            return View();
         }
 
         public IActionResult Contact()
