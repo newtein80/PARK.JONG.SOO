@@ -8,6 +8,7 @@ namespace PARK.JONG.SOO.Models.ApplicationModel
     // InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Identity.SignInManager`1[Microsoft.AspNetCore.Identity.IdentityUser]' while attempting to activate
     public class ApplicationUser : IdentityUser
     {
-
+        [Display(Name = "xxxx122")]
+        override public string UserName { get; set; }
     }
 }
