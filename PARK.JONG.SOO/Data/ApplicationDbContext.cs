@@ -12,20 +12,20 @@ namespace PARK.JONG.SOO.Data
 {
     // Exception : Cannot create a DbSet for 'ApplicationUser' because this type is not included in the model for the context
     // I found the problem. My ApplicationContext was inheriting from DbContext. I changed it to IdentityDbContext<ApplicationUser> and it works.
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, String>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
+        public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
         public virtual DbSet<TOrgInfo> TOrgInfo { get; set; }
         public virtual DbSet<TUserInfo> TUserInfo { get; set; }
 
         public virtual DbSet<TCommonCode> TCommonCode { get; set; }
         public virtual DbSet<TMenu> TMenu { get; set; }
-
-        public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -295,5 +295,7 @@ namespace PARK.JONG.SOO.Data
             });
             #endregion
         }
+
+        public DbSet<PARK.JONG.SOO.Models.ApplicationModel.ApplicationRole> ApplicationRole { get; set; }
     }
 }
